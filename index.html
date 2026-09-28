@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>raws.sport | Gymwear & Supplements</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,5,5,.95);
+    border-bottom:1px solid #292929;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo-text{
+    font-size:27px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo-text span{
+    color:#777;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.menu a:hover{
+    color:#888;
+}
+
+.cart{
+    background:#111;
+    border:1px solid #555;
+    color:white;
+    padding:10px 15px;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    min-height:650px;
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at 75% 40%,#292929,#101010 35%,#050505 70%);
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        135deg,
+        transparent 0px,
+        transparent 40px,
+        rgba(255,255,255,.025) 41px,
+        transparent 42px
+    );
+}
+
+.hero-content{
+
+    max-width:1200px;
+
+    width:100%;
+
+    margin:auto;
+
+    padding:70px 25px;
+
+    position:relative;
+}
+
+.hero-logo{
+
+    width:260px;
+
+    max-width:80%;
+
+    margin-bottom:20px;
+}
+
+.hero h1{
+
+    font-size:clamp(55px,9vw,100px);
+
+    line-height:.85;
+
+    letter-spacing:-5px;
+
+    text-transform:lowercase;
+}
+
+.hero h1 span{
+    color:#777;
+}
+
+.hero p{
+
+    max-width:550px;
+
+    margin:25px 0;
+
+    color:#aaa;
+
+    font-size:17px;
+}
+
+.btn{
+
+    display:inline-block;
+
+    background:white;
+
+    color:black;
+
+    padding:14px 25px;
+
+    border:1px solid white;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+
+.btn:hover{
+    background:#ccc;
+}
+
+.btn-dark{
+
+    background:transparent;
+
+    color:white;
+
+    border-color:#555;
+
+    margin-left:8px;
+}
+
+/* ================= SECTIONS ================= */
+
+.section{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:75px 25px;
+}
+
+.title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    border-bottom:1px solid #292929;
+
+    padding-bottom:15px;
+
+    margin-bottom:30px;
+}
+
+.title h2{
+
+    font-size:32px;
+
+    text-transform:uppercase;
+}
+
+.title p{
+    color:#777;
+    font-size:13px;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:18px;
+}
+
+.product{
+
+    background:#101010;
+
+    border:1px solid #252525;
+
+    transition:.25s;
+
+    overflow:hidden;
+}
+
+.product:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#666;
+}
+
+.product-img{
+
+    height:280px;
+
+    background:#151515;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.product-img img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+.product-info{
+
+    padding:18px;
+}
+
+.brand{
+
+    font-size:10px;
+
+    color:#777;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.product h3{
+
+    margin:7px 0;
+
+    font-size:17px;
+}
+
+.price{
+
+    font-size:18px;
+
+    font-weight:bold;
+}
+
+.product button{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:11px;
+
+    background:#191919;
+
+    color:white;
+
+    border:1px solid #444;
+
+    cursor:pointer;
+}
+
+.product button:hover{
+    background:#292929;
+}
+
+/* ================= CLASSIC RAWS ================= */
+
+.classic{
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #111,
+        #050505
+    );
+
+    border-top:1px solid #252525;
+
+    border-bottom:1px solid #252525;
+}
+
+.classic-content{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 25px;
+}
+
+.classic h2{
+
+    font-size:45px;
+
+    text-transform:uppercase;
+
+    letter-spacing:-2px;
+}
+
+.classic h2 span{
+    color:#777;
+}
+
+.classic p{
+
+    max-width:600px;
+
+    color:#999;
+
+    margin:15px 0 30px;
+}
+
+/* ================= BANNER ================= */
+
+.banner{
+
+    margin-top:30px;
+
+    padding:50px;
+
+    border:1px solid #292929;
+
+    background:
+    linear-gradient(
+        110deg,
+        #191919,
+        #080808
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+}
+
+.banner h2{
+
+    font-size:38px;
+
+    line-height:1;
+}
+
+.banner p{
+
+    color:#999;
+
+    margin-top:10px;
+}
+
+/* ================= BRANDS ================= */
+
+.brands{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:10px;
+}
+
+.brand-box{
+
+    padding:25px 10px;
+
+    border:1px solid #292929;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    color:#999;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:10px;
+}
+
+.gallery img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border:1px solid #222;
+
+    transition:.3s;
+}
+
+.gallery img:hover{
+
+    transform:scale(1.02);
+
+    filter:brightness(.8);
+}
+
+/* ================= DELIVERY ================= */
+
+.delivery{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.delivery-box{
+
+    background:#0d0d0d;
+
+    border:1px solid #252525;
+
+    padding:30px;
+}
+
+.delivery-box h3{
+
+    margin-bottom:10px;
+}
+
+.delivery-box p{
+
+    color:#888;
+
+    font-size:14px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+
+    background:#f2f2f2;
+
+    color:#111;
+}
+
+.contact .title{
+
+    border-color:#ccc;
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:50px;
+}
+
+.contact p{
+
+    color:#555;
+
+    margin:8px 0;
+}
+
+form{
+
+    display:grid;
+
+    gap:12px;
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid #ccc;
+
+    font-family:Arial;
+}
+
+textarea{
+
+    height:120px;
+
+    resize:none;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    border-top:1px solid #252525;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:12px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:850px){
+
+    .menu{
+        display:none;
+    }
+
+    .products{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .brands{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .delivery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .banner{
+        display:block;
+    }
+
+    .banner .btn{
+        margin-top:20px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:60px;
+    }
+
+    .section{
+        padding:55px 16px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<nav>
+
+<div class="logo-text">
+raws<span>.sport</span>
+</div>
+
+<div class="menu">
+
+<a href="#ropa">Ropa</a>
+
+<a href="#suplementos">
+Suplementos
+</a>
+
+<a href="#marcas">
+Marcas
+</a>
+
+<a href="#galeria">
+Galería
+</a>
+
+<a href="#contacto">
+Contacto
+</a>
+
+</div>
+
+<button class="cart" onclick="mostrarCarrito()">
+
+🛒 Carrito
+<span id="contador">0</span>
+
+</button>
+
+</nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<img
+src="logo.jpg"
+class="hero-logo"
+alt="raws.sport"
+>
+
+<h1>
+gótico
+<br>
+<span>de siempre.</span>
+</h1>
+
+<p>
+
+Gymwear, streetwear y suplementos.
+
+Drops seleccionados para quienes entrenan
+sin dejar de lado el estilo.
+
+</p>
+
+<a href="#ropa" class="btn">
+Ver colección
+</a>
+
+<a href="#contacto" class="btn btn-dark">
+Contáctanos
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= CLÁSICO RAWS ================= -->
+
+<section class="classic">
+
+<div class="classic-content">
+
+<h2>
+LO CLÁSICO DE
+<span>RAWS.</span>
+</h2>
+
+<p>
+
+La estética oscura, los gráficos pesados,
+las prendas negras y los drops que hacen
+que raws.sport sea raws.
+
+</p>
+
+<a href="#galeria" class="btn">
+Ver piezas
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= ROPA ================= -->
+
+<section class="section" id="ropa">
+
+<div class="title">
+
+<div>
+
+<h2>
+Ropa
+</h2>
+
+<p>
+Drops disponibles
+</p>
+
+</div>
+
+</div>
+
+
+<div class="products">
+
+
+<!-- PRODUCTO 1 -->
+
+<div class="product">
+
+<div class="product-img">
+
+<img
+src="playera1.jpg"
+alt="Playera raws"
+>
+
+</div>
+
+<div class="product-info">
+
+<span class="brand">
+raws.sport
+</span>
+
+<h3>
+Playera gráfica negra
+</h3>
+
+<div class="price">
+$899 MXN
+</div>
+
+<button onclick="agregarCarrito('Playera gráfica negra')">
+
+Agregar al carrito
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCTO 2 -->
+
+<div class="product">
+
+<div class="product-img">
+
+<img
+src="playera2.jpg"
+alt="Playera deportiva"
+>
+
+</div>
+
+<div class="product-info">
+
+<span class="brand">
+Breathe Divinity
+</span>
+
+<h3>
+Training Tee
+</h3>
+
+<div class="price">
+$999 MXN
+</div>
+
+<button onclick="agregarCarrito('Training Tee')">
+
+Agregar al carrito
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCTO 3 -->
+
+<div class="product">
+
+<div class="product-img">
+
+<img
+src="playera3.jpg"
+alt="Playera gráfica"
+>
+
+</div>
+
+<div class="product-info">
+
+<span class="brand">
+Civil Regime
+</span>
+
+<h3>
+Graphic Heavy Tee
+</h3>
+
+<div class="price">
+$1,199 MXN
+</div>
+
+<button onclick="agregarCarrito('Graphic Heavy Tee')">
+
+Agregar al carrito
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCTO 4 -->
+
+<div class="product">
+
+<div class="product-img">
+
+<img
+src="hoodie.jpg"
+alt="Hoodie negra"
+>
+
+</div>
+
+<div class="product-info">
+
+<span class="brand">
+raws.sport
+</span>
+
+<h3>
+Hoodie gráfica negra
+</h3>
+
+<div class="price">
+$1,399 MXN
+</div>
+
+<button onclick="agregarCarrito('Hoodie gráfica negra')">
+
+Agregar al carrito
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= SUPLEMENTOS ================= -->
+
+<section class="section" id="suplementos">
+
+<div class="title">
+
+<div>
+
+<h2>
+Suplementos
+</h2>
+
+<p>
+Productos disponibles y preventas
+</p>
+
+</div>
+
+</div>
+
+
+<div class="products">
+
+
+<div class="product">
+
+<div class="product-img">
+
+<img
+src="suplementos.jpg"
+alt="Suplementos"
+>
+
+</div>
+
+<div class="product-info">
+
+<span class="brand">
+Suplementos
+</span>
+
+<h3>
+Protein Bars
+</h3>
+
+<div class="price">
+$40 MXN
+</div>
+
+<button onclick="agregarCarrito('Protein Bar')">
+
+Agregar
+
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-img">
+
+<img
+src="ghost.jpg"
+alt="Ghost Whey"
+>
+
+</div>
+
+<div class="product-info">
+
+<span class="brand">
+Ghost
+</span>
+
+<h3>
+Ghost Whey Protein
+</h3>
+
+<div class="price">
+Consultar
+</div>
+
+<button onclick="contactar()">
+
+Consultar
+
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-img">
+
+<img
+src="suplementos.jpg"
+alt="Preentreno"
+>
+
+</div>
+
+<div class="product-info">
+
+<span class="brand">
+Pre-order
+</span>
+
+<h3>
+Pre-entrenos
+</h3>
+
+<div class="price">
+Consultar
+</div>
+
+<button onclick="contactar()">
+
+Consultar
+
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-img">
+
+<img
+src="suplementos.jpg"
+alt="Creatina"
+>
+
+</div>
+
+<div class="product-info">
+
+<span class="brand">
+Pre-order
+</span>
+
+<h3>
+Creatina
+</h3>
+
+<div class="price">
+Consultar
+</div>
+
+<button onclick="contactar()">
+
+Consultar
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= PROMOCIÓN ================= -->
+
+<section class="section">
+
+<div class="banner">
+
+<div>
+
+<h2>
+PROTEIN
+<br>
+PARA TU PRÓXIMO PR.
+</h2>
+
+<p>
+Pregunta por disponibilidad y preventas.
+</p>
+
+</div>
+
+<a href="#contacto" class="btn">
+Preguntar
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= MARCAS ================= -->
+
+<section class="section" id="marcas">
+
+<div class="title">
+
+<div>
+
+<h2>
+Marcas
+</h2>
+
+<p>
+Drops y productos seleccionados
+</p>
+
+</div>
+
+</div>
+
+
+<div class="brands">
+
+<div class="brand-box">
+YOUNGLA
+</div>
+
+<div class="brand-box">
+BREATHE DIVINITY
+</div>
+
+<div class="brand-box">
+GYMSHARK
+</div>
+
+<div class="brand-box">
+DARC SPORT
+</div>
+
+<div class="brand-box">
+CIVIL REGIME
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= GALERÍA ================= -->
+
+<section class="section" id="galeria">
+
+<div class="title">
+
+<div>
+
+<h2>
+RAWS REAL
+</h2>
+
+<p>
+Productos de nuestra tienda
+</p>
+
+</div>
+
+</div>
+
+
+<div class="gallery">
+
+<img
+src="logo.jpg"
+alt="Logo raws.sport"
+>
+
+<img
+src="playera1.jpg"
+alt="Playera raws"
+>
+
+<img
+src="suplementos.jpg"
+alt="Suplementos raws"
+>
+
+<img
+src="playera2.jpg"
+alt="Ropa raws"
+>
+
+<img
+src="playera3.jpg"
+alt="Playera gráfica"
+>
+
+<img
+src="hoodie.jpg"
+alt="Hoodie raws"
+>
+
+<img
+src="ghost.jpg"
+alt="Ghost Whey"
+>
+
+</div>
+
+</section>
+
+
+<!-- ================= ENTREGAS ================= -->
+
+<section class="section">
+
+<div class="title">
+
+<div>
+
+<h2>
+Entregas
+</h2>
+
+<p>
+Compra local o recibe tu pedido
+</p>
+
+</div>
+
+</div>
+
+
+<div class="delivery">
+
+
+<div class="delivery-box">
+
+<h3>
+📍 Celaya
+</h3>
+
+<p>
+Entregas personales en diferentes
+puntos de Celaya.
+</p>
+
+</div>
+
+
+<div class="delivery-box">
+
+<h3>
+📦 Envíos nacionales
+</h3>
+
+<p>
+Enviamos productos a diferentes
+partes de México.
+</p>
+
+</div>
+
+
+<div class="delivery-box">
+
+<h3>
+🔥 Preventas
+</h3>
+
+<p>
+Pregunta por productos especiales
+y próximos drops.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACTO ================= -->
+
+<section class="contact" id="contacto">
+
+<div class="section">
+
+<div class="title">
+
+<div>
+
+<h2>
+Contacto
+</h2>
+
+<p>
+¿Buscas algo?
+</p>
+
+</div>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div>
+
+<h3>
+raws.sport
+</h3>
+
+<p>
+📍 Celaya, Guanajuato
+</p>
+
+<p>
+📦 Envíos nacionales
+</p>
+
+<p>
+📱 Instagram:
+@raws.sport
+</p>
+
+<p>
+🖤 Gymwear & Streetwear
+</p>
+
+</div>
+
+
+<form onsubmit="enviarMensaje(event)">
+
+<input
+type="text"
+id="nombre"
+placeholder="Tu nombre"
+required
+>
+
+<input
+type="text"
+id="producto"
+placeholder="¿Qué producto buscas?"
+required
+>
+
+<textarea
+id="mensaje"
+placeholder="Escribe tu mensaje..."
+></textarea>
+
+<button
+class="btn"
+type="submit"
+>
+
+Enviar mensaje
+
+</button>
+
+</form>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+raws.sport
+
+<br><br>
+
+Gymwear • Streetwear • Supplements
+
+<br><br>
+
+© 2026 raws.sport
+
+</footer>
+
+
+<script>
+
+/* ================= CARRITO ================= */
+
+let carrito = [];
+
+
+function agregarCarrito(producto){
+
+    carrito.push(producto);
+
+    document.getElementById("contador").textContent =
+    carrito.length;
+
+    alert(
+        producto +
+        " fue agregado al carrito."
+    );
+
+}
+
+
+function mostrarCarrito(){
+
+    if(carrito.length === 0){
+
+        alert(
+            "Tu carrito está vacío."
+        );
+
+        return;
+
+    }
+
+
+    let lista = "";
+
+    carrito.forEach(
+        (producto,index)=>{
+
+            lista +=
+            (index+1) +
+            ". " +
+            producto +
+            "\n";
+
+        }
+    );
+
+
+    alert(
+        "TU CARRITO\n\n" +
+        lista +
+        "\nTotal de productos: " +
+        carrito.length
+    );
+
+}
+
+
+/* ================= CONTACTO ================= */
+
+function contactar(){
+
+    document
+    .getElementById("contacto")
+    .scrollIntoView();
+
+}
+
+
+function enviarMensaje(event){
+
+    event.preventDefault();
+
+
+    let nombre =
+    document.getElementById("nombre").value;
+
+
+    let producto =
+    document.getElementById("producto").value;
+
+
+    let mensaje =
+    document.getElementById("mensaje").value;
+
+
+    let texto =
+
+    "Hola, soy " +
+    nombre +
+    ". Me interesa: " +
+    producto +
+    ". " +
+    mensaje;
+
+
+    let url =
+
+    "https://wa.me/?text=" +
+    encodeURIComponent(texto);
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>
